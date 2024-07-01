@@ -1,6 +1,6 @@
 # Exploring AWS EKS with eksctl
 
-![Updated: Jul 19, 2023](https://img.shields.io/badge/Updated-Jul%2019%2C%202023-blue)
+![Updated: Jul 1, 2024](https://img.shields.io/badge/Updated-Jul%2019%2C%202023-blue)
 
 ## Introduction to Kubernetes
 
