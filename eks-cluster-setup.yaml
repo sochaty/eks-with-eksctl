@@ -2,7 +2,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: eks-demo-cluster
+  name: eks-demo
   region: us-east-1
 
 nodeGroups:
@@ -10,4 +10,14 @@ nodeGroups:
     instanceType: t2.small
     desiredCapacity: 3
     ssh: # public existing key
+      publicKeyName: demokey1
+  - name: nodegrp-hybrid
+    minSize: 3
+    maxSize: 5
+    instancesDistribution:
+      maxPrice: 0.2
+      instanceTypes: ["t2.small", "t3.small"]
+      onDemandBaseCapacity: 0
+      onDemandPercentageAboveBasecapacity: 50
+    ssh:
       publicKeyName: demokey1
